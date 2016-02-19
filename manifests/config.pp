@@ -20,9 +20,9 @@ class nginx::config {
 
     $github_test_index = 'https://raw.githubusercontent.com/nwea-techops/tech_quiz/master/index.html'
 
-    exec { 'retreive test index.html from NWEA test github repo':
-        command => "/usr/bin/wget ${github_test_index}",
-        creates => '/usr/share/nginx/html/index.html'
+    exec { 'retreive index.html from NWEA test github repo':
+        cwd     => "/usr/share/nginx/html/",
+        command => "/usr/bin/rm index.html; /usr/bin/wget ${github_test_index}",
     }
 
 }

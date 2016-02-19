@@ -2,6 +2,10 @@ class nginx::firewall {
 
     notify{'firewall.pp':}
 
+    service {'iptables':
+        ensure => 'running',
+    }
+
     exec {"Add 8888 to list of bindable http ports, see README":
         path    => ['/bin','/sbin'],
         command => 'semanage port -a -t http_port_t  -p tcp 8888',
