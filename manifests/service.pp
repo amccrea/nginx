@@ -7,6 +7,9 @@ class nginx::service {
         enable => true,
         hasrestart => true,
         hasstatus => true,
-        require => Class['nginx::firewall'],
+        require => [ Class['ngins::add_repo'],
+                     Class['ngins::install'],
+                     Class['ngins::config'],
+                     Class['nginx::firewall'] ],
     }
 }
