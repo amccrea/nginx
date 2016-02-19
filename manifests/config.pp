@@ -22,7 +22,8 @@ class nginx::config {
 
     exec { 'retreive test index.html from NWEA test github repo':
         command => "/usr/bin/wget ${github_test_index}",
-        creates => '/usr/share/nginx/html/index.html'
+        creates => '/usr/share/nginx/html/index.html',
+        require => Class['nginx::install']
     }
 
 }
