@@ -7,7 +7,7 @@ class nginx::config {
     file { '/etc/nginx/default.conf.orig':
         ensure  => present,
         source  => "/etc/nginx/conf.d/default.conf",
-        require => Class['nginx::install']
+        require => Class['nginx::install'],
     }
 
     file_line { 'Set nginx to listen on port 8888':
@@ -15,7 +15,7 @@ class nginx::config {
         path    => '/etc/nginx/conf.d/default.conf',
         line    => "    listen 8888;",
         match   => 'listen ',
-        require => Class['nginx::install']
+        require => Class['nginx::install'],
     }
 
     $github_test_index = 'https://raw.githubusercontent.com/nwea-techops/tech_quiz/master/index.html'
@@ -23,6 +23,7 @@ class nginx::config {
     exec { 'retreive index.html from NWEA test github repo':
         cwd     => "/usr/share/nginx/html/",
         command => "/usr/bin/rm index.html; /usr/bin/wget ${github_test_index}",
+        require => Class['nginx::install'],
     }
 
 }
