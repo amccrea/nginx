@@ -5,7 +5,5 @@ class nginx::service {
         enable => true,
         hasrestart => true,
         hasstatus => true,
-        require => [ Class['nginx::config'],
-                     Class['nginx::firewall'] ],
     }
 }
