@@ -68,7 +68,7 @@ Automating this setup is extremely helpful for several reasons.
 multiply that by 100 machines, and simple setups become a huge pain.
 (2) Not only can you install your initial setup quickly, but if some of your commodity hardware fails, 
 you can deploy a new machine almost instantanously.
-(3) Probably the most important thing in devops personel's life - it's easy to make chances. Need to 
+(3) Probably the most important thing in the devops day - it's easy to make chances. Need to 
 change one piece? A config variable, an admin email, a firewall rule? Simply edit a manifest (or a few), 
 and either have them all do a manual pull using mcollective/etc, or wait 30 mins and they'll all be updated automatically. 
 (4) Monitoring is so much easier. The puppet agent also serves as a monitor and that data can be so nicely 
