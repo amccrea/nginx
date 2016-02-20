@@ -37,7 +37,7 @@ nginx
 
 
 FIREWALL NOTE: CentOS7 has SELinux (security enhanced) enabled by default and requires a `semanage` command 
-to allow 8888 to able to be binded to as a web port. 
+to allow 8888 to able to be binded to as a web port. (Forgive my grammar.)
 See: http://serverfault.com/questions/566317/nginx-no-permission-to-bind-port-8090-but-it-binds-to-80-and-8080. 
 I don't have any intention of disabling SELinux so I just have puppet exec the command before starting the nginx service. 
 
