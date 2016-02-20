@@ -1,7 +1,5 @@
 class nginx::firewall {
 
-    notify{'firewall.pp':}
-
     service {'iptables':
         ensure => 'running',
     }

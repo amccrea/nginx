@@ -1,7 +1,5 @@
 class nginx::service {
 
-    notify{'service.pp':}
-
     service {'nginx':
         ensure => running,
         enable => true,
