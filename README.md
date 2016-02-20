@@ -1,6 +1,5 @@
 NWEA Code Sample Request README
 - Alison McCrea, 2/19/2016 for NWEA
-=================================================================
 
 Hi! This Nginx Puppet module was tested on VMWare workstation running CentOS 7, configured as a standalone server (no puppet master).
 
