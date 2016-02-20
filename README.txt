@@ -25,7 +25,7 @@ Dir structure: /etc/puppet/modules/nginx
 
 nginx
 +-- manifests
-|    |-- init.pp 		// defines other manifests
+|    |-- init.pp 	// defines other manifests
 |    |-- add_repo.pp 	// adds yum repo for nginx
 |    |-- install.pp     // installs nginx
 |    |-- config.pp      // edits nginx's default.conf to listen on port 8888
@@ -33,7 +33,7 @@ nginx
 |    |-- firewall.pp    // opens port 8888 in firewall, makes bindable for http
 |    |-- service.pp 	// starts (ensures) nginx service running
 +-- files
-	|-- nginx_repo 		// textfile for nginx yum repo
+     |-- nginx_repo 	// textfile for nginx yum repo
 
 
 FIREWALL NOTE: CentOS7 has SELinux (security enhanced) enabled by default and requires a `semanage` command 
